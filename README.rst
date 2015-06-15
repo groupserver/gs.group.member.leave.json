@@ -19,9 +19,53 @@ Web-hook to remove someone from a group
 Introduction
 ============
 
-This product provides the ``gs-group-member-leave.json``
-web-hook, in the site context. It allows a person to
-pragmatically be removed from a group by an external system.
+This product provides a `web hook`_ that allows a person to be
+removed from a group by an external system.
+
+Web hook
+========
+
+The ``gs-group-member-leave.json`` page in the **site** context
+removes a person from the group.
+
+Request
+-------
+
+It takes the following arguments (all required).
+
+``groupId``:
+  The identifier for the group.
+
+``userId``:
+  The identifier for the user.
+
+``token``:
+  The authentication token [#token]_
+
+Response
+--------
+
+In response a JSON object will be returned with the following
+values:
+
+``status``:
+  The exist status:
+
+  * ``0``: Ok, the person has been removed from the group.
+  * ``1``: No such group.
+  * ``2``: No such user.
+  * ``4``: The user and group exist, but the user is not a member
+    of the group.
+
+``message``:
+  A message for the user.
+
+``groupId``:
+  The identifier for the group.
+
+``userId``:
+  The identifier for the user.
+
 
 Resources
 =========
@@ -37,7 +81,7 @@ Resources
 .. _OnlineGroups.Net: https://onlinegroups.net
 .. _Michael JasonSmith: http://groupserver.org/p/mpj17
 
-.. [#manage] See ``gs.group.member.manage``
-             <https://github.com/groupserver/gs.group.member.manage/>
+.. [#token] See ``gs.auth.token``
+             <https://github.com/groupserver/gs.auth.token/>
 
 ..  LocalWords:  html
