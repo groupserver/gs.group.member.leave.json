@@ -10,7 +10,7 @@
   `OnlineGroups.net`_.
 
 ..  _Creative Commons Attribution-Share Alike 4.0 International
-    License: http://creativecommons.org/licenses/by-sa/4.0/
+    License: https://creativecommons.org/licenses/by-sa/4.0/
 
 This product provides a web hook that allows a person to be
 removed from a group by an external system.
@@ -45,8 +45,5 @@ Resources
 .. _GroupServer.org: http://groupserver.org/
 .. _OnlineGroups.Net: https://onlinegroups.net
 .. _Michael JasonSmith: http://groupserver.org/p/mpj17
-
-.. [#token] See ``gs.auth.token``
-             <https://github.com/groupserver/gs.auth.token/>
 
 ..  LocalWords:  html

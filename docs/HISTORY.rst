@@ -1,14 +1,10 @@
 Changelog
 =========
 
-1.0.0 (2015-06-xx)
+1.0.0 (2015-06-19)
 ------------------
 
-Initial version. Prior to the creation of this product the
-email-command to leave a group was handled by
-`gs.group.member.leave.base`_.
+Initial version. Prior to the creation of this product there was
+no way to add a person to a group using JSON.
 
-.. _gs.group.member.leave.base:
-   https://github.com/groupserver/gs.group.member.leave.base
-
-..  LocalWords:  Changelog
+..  LocalWords:  Changelog JSON
