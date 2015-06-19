@@ -13,6 +13,7 @@
 #
 ############################################################################
 from __future__ import absolute_import, print_function, unicode_literals
+from collections import OrderedDict
 from json import dumps as to_json
 from logging import getLogger
 log = getLogger('gs.group.member.leave.json.hook')
@@ -41,8 +42,7 @@ class LeaveGroupHook(SiteEndpoint):
 
 :param action: The button that was clicked.
 :param dict data: The form data.'''
-        r = {'groupId': data['groupId'],
-             'userId': data['userId'], }
+        r = OrderedDict()
         groupInfo = createObject('groupserver.GroupInfo', self.context, data['groupId'])
         userInfo = createObject('groupserver.UserFromId', self.context, data['userId'])
         if groupInfo.groupObj is None:
@@ -58,7 +58,8 @@ class LeaveGroupHook(SiteEndpoint):
         else:
             r['status'] = self.NOT_MEMBER
             r['message'] = '{0} is not a member {1}'.format(userInfo.name, groupInfo.name)
-
+        r['groupId'] = data['groupId']
+        r['userId'] = data['userId']
         retval = to_json(r)
         return retval
 
