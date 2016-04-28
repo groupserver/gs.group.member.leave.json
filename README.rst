@@ -26,7 +26,7 @@ Resources
 =========
 
 - Documentation:
-  http://groupserver.readthedocs.org/projects/gsgroupmemberleavejson
+  http://groupserver.readthedocs.io/projects/gsgroupmemberleavejson
 - Code repository:
   https://github.com/groupserver/gs.group.member.leave.json/
 - Questions and comments to
